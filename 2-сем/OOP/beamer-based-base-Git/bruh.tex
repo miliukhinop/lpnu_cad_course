@@ -1,0 +1,515 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  ignorenonframetext,
+  aspectratio=169,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T2A]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\usetheme[]{Malmoe}
+\usefonttheme{serif} % use mainfont rather than sansfont for slide text
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Fira Sans}
+  \setmonofont[]{Fantasque Sans Mono}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\newif\ifbibliography
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{ukrainian}
+\ifPDFTeX
+\else
+\babelfont[ukrainian]{rm}{Fira Sans}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Базована база Git},
+  pdfauthor={Олександр Мілюхін},
+  pdflang={uk-UA},
+  colorlinks=true,
+  linkcolor={Maroon},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Базована база Git}
+\author{Олександр Мілюхін}
+\date{}
+\institute{Національний університет ``Львівська Політехніка''}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}{План}
+\protect\hypertarget{ux43fux43bux430ux43d}{}
+\tableofcontents
+\end{frame}
+
+\hypertarget{ux442ux443ux43fux438ux439-ux432ux456ux434ux441ux442ux435ux436ux443ux432ux430ux447-ux432ux43cux456ux441ux442ux443}{%
+\section{Тупий відстежувач
+вмісту}\label{ux442ux443ux43fux438ux439-ux432ux456ux434ux441ux442ux435ux436ux443ux432ux430ux447-ux432ux43cux456ux441ux442ux443}}
+
+\begin{frame}{Git --- тупий відстежувач вмісту}
+\protect\hypertarget{git-ux442ux443ux43fux438ux439-ux432ux456ux434ux441ux442ux435ux436ux443ux432ux430ux447-ux432ux43cux456ux441ux442ux443}{}
+На початках (1991--2002) зміни в ядро Linux передавалися як патчі та
+архіви. У 2002 р. проєкт почав використовувати пропрієтарну РСКВ
+BitKeeper.
+
+\textbf{Git народилася у 2005, коли чувакам набридло миритися з
+комерційною натурою BitKeeper.}
+
+\begin{block}{Чому \textbf{розподілена}?}
+\protect\hypertarget{ux447ux43eux43cux443-ux440ux43eux437ux43fux43eux434ux456ux43bux435ux43dux430}{}
+\textless++\textgreater{} бо, на відміну від старих централізованих
+систем, розподілена система дає всім, хто завантажив репозиторій,
+можливість перейти до будь-якого збереженого стану без звертання до
+сервера.
+\end{block}
+\end{frame}
+
+\begin{frame}{Що можна відстежувати?}
+\protect\hypertarget{ux449ux43e-ux43cux43eux436ux43dux430-ux432ux456ux434ux441ux442ux435ux436ux443ux432ux430ux442ux438}{}
+Все, що завгодно. Контроль версій може вам знадобитися в місцях, де ви
+його найменше сподіваєтеся.
+
+\begin{itemize}
+\tightlist
+\item
+  програми
+\item
+  конфігураційні файли
+\item
+  документи (також вебсторінки)
+\item
+  придумайте
+\end{itemize}
+
+Зміни в цій презентації також контрольовані за допомогою Git.
+\end{frame}
+
+\hypertarget{ux43eux441ux43dux43eux432ux438-ux432ux436ux438ux442ux43aux443}{%
+\section{Основи
+вжитку}\label{ux43eux441ux43dux43eux432ux438-ux432ux436ux438ux442ux43aux443}}
+
+\hypertarget{cli}{%
+\subsection{CLI}\label{cli}}
+
+\begin{frame}[fragile]{CLI --- імба}
+\protect\hypertarget{cli-ux456ux43cux431ux430}{}
+Переваги використання Git через інтерфейс командного рядка:
+
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  Ви не будете прив'язані до інтерфейсу якогось IDE \pause
+\item
+  Краще зрозумієте програму \pause
+\item
+  швидше будете знаходити рішення різних проблем \pause
+\item
+  будете виглядати як крутий гакер \pause
+\end{itemize}
+
+\begin{block}{Як не помилятися та швидше рухатись}
+\protect\hypertarget{ux44fux43a-ux43dux435-ux43fux43eux43cux438ux43bux44fux442ux438ux441ux44f-ux442ux430-ux448ux432ux438ux434ux448ux435-ux440ux443ux445ux430ux442ux438ux441ux44c}{}
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  Натискати \textbf{\texttt{Tab}} (часом кілька разів) для
+  автодоповнення \pause
+\item
+  \textbf{Стрілки} вгору-вниз для переміщення по історії команд \pause
+\item
+  \emph{не вчити} команди, а \textbf{використовувати} їх
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Швидкий копен-дупен}
+\protect\hypertarget{ux448ux432ux438ux434ux43aux438ux439-ux43aux43eux43fux435ux43d-ux434ux443ux43fux435ux43d}{}
+\begin{block}{Ініціалізація репо:}
+\protect\hypertarget{ux456ux43dux456ux446ux456ux430ux43bux456ux437ux430ux446ux456ux44f-ux440ux435ux43fux43e}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{git}\NormalTok{ init}
+\FunctionTok{git}\NormalTok{ add .}
+\FunctionTok{git}\NormalTok{ commit }\AttributeTok{{-}m} \StringTok{"мяу"}
+\end{Highlighting}
+\end{Shaded}
+
+\pause
+\end{block}
+
+\begin{block}{Повернення до початкового стану:}
+\protect\hypertarget{ux43fux43eux432ux435ux440ux43dux435ux43dux43dux44f-ux434ux43e-ux43fux43eux447ux430ux442ux43aux43eux432ux43eux433ux43e-ux441ux442ux430ux43dux443}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{git}\NormalTok{ reset }\AttributeTok{{-}{-}hard}
+\end{Highlighting}
+\end{Shaded}
+
+\pause
+\end{block}
+
+\begin{block}{Внесення нових змін:}
+\protect\hypertarget{ux432ux43dux435ux441ux435ux43dux43dux44f-ux43dux43eux432ux438ux445-ux437ux43cux456ux43d}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{git}\NormalTok{ commit }\AttributeTok{{-}a} \AttributeTok{{-}m} \StringTok{"якісь зміни"}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{quote}
+-a каже додати до індексу всі зміни/видалення
+\end{quote}
+\end{block}
+\end{frame}
+
+\begin{frame}{bruh}
+\protect\hypertarget{bruh}{}
+\begin{columns}
+\column{.5\textwidth}
+\begin{figure}
+    \includegraphics[width=.7\textwidth]{images/image_proxy.jpg}
+\end{figure}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{База}
+\protect\hypertarget{ux431ux430ux437ux430}{}
+\begin{block}{Додання}
+\protect\hypertarget{ux434ux43eux434ux430ux43dux43dux44f}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{git}\NormalTok{ add }\PreprocessorTok{[}\SpecialStringTok{назва}\PreprocessorTok{{-}}\SpecialStringTok{файлу}\PreprocessorTok{]}   \CommentTok{\# додати файл}
+\end{Highlighting}
+\end{Shaded}
+
+\pause
+\end{block}
+
+\begin{block}{Видалення}
+\protect\hypertarget{ux432ux438ux434ux430ux43bux435ux43dux43dux44f}{}
+видалити файл і з індексу, і з середовища \textless++\textgreater.
+\texttt{-r}, щоб рекурсивно:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{git}\NormalTok{ rm }\PreprocessorTok{[}\SpecialStringTok{назва}\PreprocessorTok{{-}}\SpecialStringTok{файлу}\PreprocessorTok{]}        \CommentTok{\# (remove)}
+\FunctionTok{git}\NormalTok{ rm }\AttributeTok{{-}{-}cached}\NormalTok{ назва{-}файлу }\CommentTok{\# видалити файл тільки з індексу}
+\end{Highlighting}
+\end{Shaded}
+
+\pause
+\end{block}
+
+\begin{block}{Перейменування}
+\protect\hypertarget{ux43fux435ux440ux435ux439ux43cux435ux43dux443ux432ux430ux43dux43dux44f}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{git}\NormalTok{ mv bug.c feature.c  }\CommentTok{\# фактично переміщення (move)}
+\end{Highlighting}
+\end{Shaded}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Більше команд для відстежування}
+\protect\hypertarget{ux431ux456ux43bux44cux448ux435-ux43aux43eux43cux430ux43dux434-ux434ux43bux44f-ux432ux456ux434ux441ux442ux435ux436ux443ux432ux430ux43dux43dux44f}{}
+\begin{block}{Історія}
+\protect\hypertarget{ux456ux441ux442ux43eux440ux456ux44f}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{git}\NormalTok{ log     }\CommentTok{\# покаже список останніх комітів і їхні хеші SHA1}
+\FunctionTok{git}\NormalTok{ reflog  }\CommentTok{\# покаже зміни в гілках та посиланнях \textless{}++\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+
+\pause
+\end{block}
+
+\begin{block}{Як просто повернутися?}
+\protect\hypertarget{ux44fux43a-ux43fux440ux43eux441ux442ux43e-ux43fux43eux432ux435ux440ux43dux443ux442ux438ux441ux44f}{}
+Повернутися до потрібного коміту, створивши нову гілку:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{git}\NormalTok{ checkout }\PreprocessorTok{[}\SpecialStringTok{хеш}\PreprocessorTok{{-}}\SpecialStringTok{коміту}\PreprocessorTok{]} \PreprocessorTok{[}\SpecialStringTok{додатково}\PreprocessorTok{{-}}\SpecialStringTok{перелік}\PreprocessorTok{{-}}\SpecialStringTok{файлів}\PreprocessorTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{git}\NormalTok{ checkout }\PreprocessorTok{[}\SpecialStringTok{назва}\PreprocessorTok{{-}}\SpecialStringTok{гілки}\PreprocessorTok{]} \CommentTok{\# перейде на вказану гілку}
+\end{Highlighting}
+\end{Shaded}
+
+\pause
+\end{block}
+
+\begin{block}{Шо ви наробили коммітом? \textless++\textgreater{}}
+\protect\hypertarget{ux448ux43e-ux432ux438-ux43dux430ux440ux43eux431ux438ux43bux438-ux43aux43eux43cux43cux456ux442ux43eux43c}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{git}\NormalTok{ diff}
+\end{Highlighting}
+\end{Shaded}
+\end{block}
+\end{frame}
+
+\hypertarget{ux441ux435ux440ux432ux435ux440ux438-git}{%
+\subsection{Сервери Git}\label{ux441ux435ux440ux432ux435ux440ux438-git}}
+
+\begin{frame}{Самому сумно}
+\protect\hypertarget{ux441ux430ux43cux43eux43cux443-ux441ux443ux43cux43dux43e}{}
+Як працювати з іншими людьми? \textbf{Нам потрібен сервер!}
+
+Ось кілька сервісів, що їх надають:
+
+\begin{itemize}
+\tightlist
+\item
+  \url{https://notabug.org/}
+\item
+  \url{https://github.com/}
+\item
+  \url{https://gitlab.com}
+\item
+  \url{https://sourceforge.net/}
+\end{itemize}
+
+\pause
+
+\begin{block}{Або свій}
+\protect\hypertarget{ux430ux431ux43e-ux441ux432ux456ux439}{}
+Власний сервер Git запустити дуже просто, наприклад, повторюючи команди
+з \href{https://landchad.net/git/}{цього посібника}. Для вебінтерфейсу
+можна використати \textbf{cgit} або \textbf{gitea}, про які там теж
+написано
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Під'єднання віддаленого сховища}
+\protect\hypertarget{ux43fux456ux434ux454ux434ux43dux430ux43dux43dux44f-ux432ux456ux434ux434ux430ux43bux435ux43dux43eux433ux43e-ux441ux445ux43eux432ux438ux449ux430}{}
+\begin{block}{Щоб пов'язати локальний репозиторій із сервером:}
+\protect\hypertarget{ux449ux43eux431-ux43fux43eux432ux44fux437ux430ux442ux438-ux43bux43eux43aux430ux43bux44cux43dux438ux439-ux440ux435ux43fux43eux437ux438ux442ux43eux440ux456ux439-ux456ux437-ux441ux435ux440ux432ux435ux440ux43eux43c}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{git}\NormalTok{ remote add }\PreprocessorTok{[}\SpecialStringTok{довільна}\PreprocessorTok{{-}}\SpecialStringTok{назва\_звич.}\PreprocessorTok{{-}}\SpecialStringTok{origin}\PreprocessorTok{]} \PreprocessorTok{[}\SpecialStringTok{ssh}\PreprocessorTok{{-}}\SpecialStringTok{або}\PreprocessorTok{{-}}\SpecialStringTok{https}\PreprocessorTok{{-}}\SpecialStringTok{адреса}\PreprocessorTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{\emph{Рекомендую ssh.}}
+
+\pause
+\end{block}
+
+\begin{block}{Завантажити репо}
+\protect\hypertarget{ux437ux430ux432ux430ux43dux442ux430ux436ux438ux442ux438-ux440ux435ux43fux43e}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{git}\NormalTok{ clone }\PreprocessorTok{[}\SpecialStringTok{ssh}\PreprocessorTok{{-}}\SpecialStringTok{або}\PreprocessorTok{{-}}\SpecialStringTok{https}\PreprocessorTok{{-}}\SpecialStringTok{адреса}\PreprocessorTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\pause
+\end{block}
+
+\begin{block}{Завантажити зміни}
+\protect\hypertarget{ux437ux430ux432ux430ux43dux442ux430ux436ux438ux442ux438-ux437ux43cux456ux43dux438}{}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{git}\NormalTok{ fetch }\PreprocessorTok{[}\SpecialStringTok{назва}\PreprocessorTok{{-}}\SpecialStringTok{джерела}\PreprocessorTok{]} \PreprocessorTok{[}\SpecialStringTok{назва}\PreprocessorTok{{-}}\SpecialStringTok{гілки}\PreprocessorTok{]} \CommentTok{\# просто інформація}
+\FunctionTok{git}\NormalTok{ pull }\PreprocessorTok{[}\SpecialStringTok{назва}\PreprocessorTok{{-}}\SpecialStringTok{джерела}\PreprocessorTok{]} \PreprocessorTok{[}\SpecialStringTok{назва}\PreprocessorTok{{-}}\SpecialStringTok{гілки}\PreprocessorTok{]}  \CommentTok{\# внесе локальні зміни}
+\end{Highlighting}
+\end{Shaded}
+\end{block}
+\end{frame}
+
+\hypertarget{git-ux443-visual-studio}{%
+\subsection{Git у Visual Studio}\label{git-ux443-visual-studio}}
+
+\begin{frame}{Час лізти в комп'ютер}
+\protect\hypertarget{ux447ux430ux441-ux43bux456ux437ux442ux438-ux432-ux43aux43eux43cux43fux44eux442ux435ux440}{}
+\begin{columns}
+\column{.6\textwidth}
+\begin{figure}
+    \includegraphics[width=\textwidth]{images/cat.jpg}
+\end{figure}
+\end{columns}
+\end{frame}
+
+\hypertarget{ux449ux43e-ux434ux430ux43bux456}{%
+\section{Що далі?}\label{ux449ux43e-ux434ux430ux43bux456}}
+
+\begin{frame}{Веб}
+\protect\hypertarget{ux432ux435ux431}{}
+\begin{itemize}
+\tightlist
+\item
+  \url{https://ohshitgit.com/} --- мінімалістичний сайт із рішеннями
+  поширених проблем (\url{https://dangitgit.com/} без матюків)
+\item
+  !! \url{https://git-scm.com/docs} --- Документація на сайті Git
+\item
+  \url{https://ndpsoftware.com/git-cheatsheet.html\#loc=index;} ---
+  графічна шпаргалка
+\item
+  \url{https://training.github.com/downloads/ua/github-git-cheat-sheet/}
+  --- ше шпаргалка
+\item
+  \url{http://www-cs-students.stanford.edu/~blynn/gitmagic/} --- гарна
+  книжка з помилками в перекладі
+\item
+  \url{https://www.youtube.com/watch?v=mJ-qvsxPHpY} --- норм відео
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Більше книжок}
+\protect\hypertarget{ux431ux456ux43bux44cux448ux435-ux43aux43dux438ux436ux43eux43a}{}
+\begin{columns}
+    \column{.65\textwidth}
+    \begin{enumerate}
+        \item \textbf{Ben Lynn.} Магія Git
+        \item \textbf{Scott Chacon, Ben Straub.} Pro Git
+        \item \textbf{Ryan Hodson.} git succinctly
+    \end{enumerate}
+    \column{.35\textwidth}
+    \begin{figure}
+        \includegraphics[width=.6\textwidth]{images/image_proxy.png}
+        \caption{книжка про Git}
+    \end{figure}
+\end{columns}
+
+\begin{block}{Або man-сторінки}
+\protect\hypertarget{ux430ux431ux43e-man-ux441ux442ux43eux440ux456ux43dux43aux438}{}
+зокрема gittutorial, giteveryday
+\end{block}
+\end{frame}
+
+\end{document}

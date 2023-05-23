@@ -1,0 +1,8 @@
+g++ -o libmy_math.so -fpic -shared my_math.cpp
+# file libmy_math.so
+# nm libmy_math.so
+g++ -c main.cpp -o main.o
+g++ -o main main.o -lmy_math -L.
+# nm -D main
+# ldd main
+LD_LIBRARY_PATH=. ./main

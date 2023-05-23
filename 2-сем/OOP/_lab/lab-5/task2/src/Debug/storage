@@ -1,0 +1,20 @@
+{
+    "value0": [
+        {
+            "name": "roll",
+            "weight": -909939488,
+            "price": 32620,
+            "quantity": -909944608,
+            "sweetness": 100,
+            "stolen": false
+        },
+        {
+            "name": "roll_2",
+            "weight": -913270112,
+            "price": 32620,
+            "quantity": 3,
+            "sweetness": 842,
+            "stolen": true
+        }
+    ]
+}

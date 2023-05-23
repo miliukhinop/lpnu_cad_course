@@ -1,0 +1,6 @@
+\babel@toc {ukrainian}{}\relax 
+\beamer@sectionintoc {1}{Тупий відстежувач вмісту}{2}{0}{1}
+\beamer@sectionintoc {2}{Вчитися}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{CLI}{4}{0}{2}
+\beamer@subsectionintoc {2}{2}{Visual Studio}{6}{0}{2}
+\beamer@sectionintoc {3}{Що далі?}{6}{0}{3}

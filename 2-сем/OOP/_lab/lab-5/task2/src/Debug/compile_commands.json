@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/sasha/Documents/uni/2-сем/OOP/labs/lab-5/task2/src/Debug",
+  "command": "/usr/bin/c++  -I/home/sasha/Documents/uni/2-сем/OOP/labs/lab-5/task2/src/include -g -std=gnu++17 -o CMakeFiles/test.dir/main.cpp.o -c /home/sasha/Documents/uni/2-сем/OOP/labs/lab-5/task2/src/main.cpp",
+  "file": "/home/sasha/Documents/uni/2-сем/OOP/labs/lab-5/task2/src/main.cpp",
+  "output": "CMakeFiles/test.dir/main.cpp.o"
+},
+{
+  "directory": "/home/sasha/Documents/uni/2-сем/OOP/labs/lab-5/task2/src/Debug",
+  "command": "/usr/bin/c++  -I/home/sasha/Documents/uni/2-сем/OOP/labs/lab-5/task2/src/include -g -std=gnu++17 -o CMakeFiles/test.dir/sweet_roll.cpp.o -c /home/sasha/Documents/uni/2-сем/OOP/labs/lab-5/task2/src/sweet_roll.cpp",
+  "file": "/home/sasha/Documents/uni/2-сем/OOP/labs/lab-5/task2/src/sweet_roll.cpp",
+  "output": "CMakeFiles/test.dir/sweet_roll.cpp.o"
+},
+{
+  "directory": "/home/sasha/Documents/uni/2-сем/OOP/labs/lab-5/task2/src/Debug",
+  "command": "/usr/bin/c++  -I/home/sasha/Documents/uni/2-сем/OOP/labs/lab-5/task2/src/include -g -std=gnu++17 -o CMakeFiles/test.dir/ware.cpp.o -c /home/sasha/Documents/uni/2-сем/OOP/labs/lab-5/task2/src/ware.cpp",
+  "file": "/home/sasha/Documents/uni/2-сем/OOP/labs/lab-5/task2/src/ware.cpp",
+  "output": "CMakeFiles/test.dir/ware.cpp.o"
+}
+]

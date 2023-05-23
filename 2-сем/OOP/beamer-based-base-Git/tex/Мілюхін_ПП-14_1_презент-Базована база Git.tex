@@ -1,0 +1,95 @@
+\documentclass[aspectratio=169]{beamer}
+
+\input{/home/sasha/Templates/lpnu_doc_templates/settings/preamble.tex}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[ukrainian]{babel}
+\usepackage{wrapfig}
+
+%\usepackage{subfiles}
+%\setbeamertemplate{caption}[numbered]
+
+\usetheme{Malmoe} % Copenhagen
+%\usecolortheme{}
+
+%\usefonttheme{serif}
+\setbeamerfont{title}{series=\bfseries,parent=structure}
+\setbeamerfont{frametitle}{series=\bfseries,parent=structure}
+
+\title{Базована база Git}
+\author{\Lname~\Fname}
+%\date{}
+
+\institute{Національний університет ``Львівська Політехніка''\\[\medskipamount]
+\includegraphics[height=.4\textheight]{$HOME/Templates/lpnu_doc_templates/lpnu_logo.png}
+}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\section{Тупий відстежувач вмісту}
+
+\begin{frame}{Git --- тупий відстежувач вмісту}{Або розподілена система контролю версій}
+
+На початках (1991–2002) зміни в ядро Linux передавалися як патчі та архіви. У 2002 р. проєкт
+почав використовувати пропрієтарну РСКВ BitKeeper.
+	\textbf {Git народилася у 2005, коли чувакам набридло миритися з комерційною натурою BitKeeper.}
+
+	%\begin{columns}
+	%	\column{.25\textwidth}
+	%	\begin{figure}
+	%		%\includegraphics[width=.9\textwidth]{<++>}
+	%		\caption{<++>}
+	%	\end{figure}
+	%		%\includegraphics[height=.5\textheight]{<++>}
+	%	\column{.75\textwidth}
+	%\end{columns}
+
+\end{frame}
+
+
+\section{Вчитися}
+
+\subsection{CLI}
+
+\begin{frame}{Стиль}{CLI --- імба}
+	\begin{block}{Як не помилятися}
+		\begin{itemize}
+			\item Натискати \texttt{Tab} для автодоповнення
+			\item Стрілки вгору-вниз для переміщення по історії команд
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Швидкий копен-дупен}
+
+	\begin{verbatim}
+			git init
+			git add .
+			git commit -m "початок"
+	\end{verbatim}
+
+	\begin{verbatim}
+		git reset --hard
+	\end{verbatim}
+
+	\begin{verbatim}
+		git commit -a -m "якісь зміни"
+	\end{verbatim}
+
+\end{frame}
+
+\subsection{Visual Studio}
+
+\section{Що далі?}
+
+\begin{frame}{Шткуи}
+
+https://ohshitgit.com/
+
+\end{frame}
+
+\end{document}

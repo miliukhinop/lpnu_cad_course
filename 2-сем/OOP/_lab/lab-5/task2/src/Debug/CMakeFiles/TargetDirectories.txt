@@ -1,0 +1,3 @@
+/home/sasha/Documents/uni/2-сем/OOP/labs/lab-5/task2/src/Debug/CMakeFiles/test.dir
+/home/sasha/Documents/uni/2-сем/OOP/labs/lab-5/task2/src/Debug/CMakeFiles/edit_cache.dir
+/home/sasha/Documents/uni/2-сем/OOP/labs/lab-5/task2/src/Debug/CMakeFiles/rebuild_cache.dir

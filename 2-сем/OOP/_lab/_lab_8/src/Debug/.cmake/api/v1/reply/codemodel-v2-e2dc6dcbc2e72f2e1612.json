@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "test-app",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "mylib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mylib-Debug-08dd3f7e08b40079361e.json",
+					"name" : "mylib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_app::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_app-Debug-021307ca80dd914311a8.json",
+					"name" : "test_app",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/sasha/Documents/uni/2-\u0441\u0435\u043c/OOP/_lab/_lab_8/src/Debug",
+		"source" : "/home/sasha/Documents/uni/2-\u0441\u0435\u043c/OOP/_lab/_lab_8/src"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}

@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/test.dir/main.cpp.o CMakeFiles/test.dir/sweet_roll.cpp.o CMakeFiles/test.dir/ware.cpp.o -o test 

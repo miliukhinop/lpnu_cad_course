@@ -1,0 +1,12 @@
+#!/bin/sh
+
+i=15
+max=16
+
+while [ $i -lt $max ]
+do
+	# qpdf --empty --pages *$i\)* -- "T_$i.pdf"
+	mkdir "$i"
+	mv *$i\)* "$i"
+	true $(( i++ ))
+done

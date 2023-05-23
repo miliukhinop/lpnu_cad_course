@@ -1,0 +1,41 @@
+\documentclass[../rgr_2.tex]{subfiles}
+
+\begin{document}
+
+\Problem{Дослідити на збіжність ряди
+}
+\Solution
+
+\begin{enumerate}
+	\item $\sum_{n=1}^\infty \frac{2^n}{n\cdot5^n}$
+	\begin{equation}
+		% \sum_{n=1}^\infty \frac{2^n}{n\cdot5^n}
+		\lim_{n\to\infty}\frac{2^n}{n\cdot5^n}=0
+		\implies\text{ряд збіжний}
+	\end{equation}
+
+	\item $\sum_{n=1}^\infty \frac{n^n}{n!}$
+	\begin{equation}
+		\lim_{n\to\infty}\frac{n^n}{n!}=\infty
+		\implies\text{ряд розбіжний}
+	\end{equation}
+
+	\item $\sum_{n=1}^\infty \frac{1}{n^3-2n}$
+	\begin{equation}
+		\lim_{n\to\infty}\frac{1}{n^3-2n}
+		=\lim_{n\to\infty}\frac{1}{n(n^2-2)}
+		=0
+		\implies\text{ряд збіжний}
+	\end{equation}
+\end{enumerate}
+
+\Answer{
+\begin{cenum}
+	\item збіжний
+	\item розбіжний
+	\item збіжний
+\end{cenum}
+}
+
+\end{document}
+end{document}

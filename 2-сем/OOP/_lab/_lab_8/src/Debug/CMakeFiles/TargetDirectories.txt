@@ -1,0 +1,4 @@
+/home/sasha/Documents/uni/2-сем/OOP/_lab/_lab_8/src/Debug/CMakeFiles/mylib.dir
+/home/sasha/Documents/uni/2-сем/OOP/_lab/_lab_8/src/Debug/CMakeFiles/test_app.dir
+/home/sasha/Documents/uni/2-сем/OOP/_lab/_lab_8/src/Debug/CMakeFiles/edit_cache.dir
+/home/sasha/Documents/uni/2-сем/OOP/_lab/_lab_8/src/Debug/CMakeFiles/rebuild_cache.dir

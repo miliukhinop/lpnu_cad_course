@@ -1,0 +1,16 @@
+\frametitle{Швидкий копен-дупен}
+
+	\begin{verbatim}
+			git init
+			git add .
+			git commit -m "початок"
+	\end{verbatim}
+
+	\begin{verbatim}
+		git reset --hard
+	\end{verbatim}
+
+	\begin{verbatim}
+		git commit -a -m "якісь зміни"
+	\end{verbatim}
+
