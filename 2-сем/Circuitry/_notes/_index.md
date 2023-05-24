@@ -1,3 +1,6 @@
+SPST 1 перемикач
+SPDT 2 перемикач
+
 [counters](counters.md)
 [lect3](lect3.md)
 [тригери](lect4.md)
