@@ -46,15 +46,22 @@
 
 \begin{dmath}
 	\iint_D dx\, dy
+	= \int_0^3\left(\int_x^{\sqrt{6x-x^2}}\, dy \right)\,dx
+	= \int_0^3\left(\sqrt{6x-x^2}-x \right)\,dx
+	= \int_0^3\sqrt{6x-x^2}\,dx -\int_0^3 x \,dx
+	= \int_0^3\sqrt{9-(x-3)^2}\,d(x-3) -\frac{x^2}{2}\Bigg|_0^3
+	= \frac{x-3}{2}\sqrt{9-(x-3)^2}+\frac{9}{2}\arcsin\frac{x-3}{3}\Bigg|_0^3 -\frac{x^2}{2}\Bigg|_0^3
+	= 0-\left(
+	\frac{0-3}{2}\sqrt{9-(0-3)^2}+\frac{9}{2}\arcsin\frac{0-3}{3}
+	\right)
+	-\frac{9}{2}
 	=
-	\int_0^3\left(\int_x^{\sqrt{6x-x^2}}\, dy \right)\,dx
-	=
-	\int_0^3\left(\sqrt{6x-x^2}-x \right)\,dx
-	\int_0^3\sqrt{6x-x^2}\,dx -\int_0^3 x \,dx
+	-\frac{9}{2}-0-\frac{9}{2}\arcsin-1
+	= \frac{9}{2}(\pi-1)
 \end{dmath}
 
 \Answer{
-	<++>
+	$\frac{9}{2}(\pi-1)$
 }
 
 \end{document}

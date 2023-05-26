@@ -1,6 +1,9 @@
 \documentclass[../rgr_2.tex]{subfiles}
 %shell-escape
 
+% \let\oldint\iint % Save the original \int command
+% \renewcommand{\iint}{\oldint\limits} % Redefine \int to include \limits
+
 \begin{document}
 
 \Problem{
@@ -17,24 +20,8 @@
 	\centering
 	\begin{tikzpicture}
 	\begin{axis}
-		[
-			% samples=5000,
-			% ymin=-10,
-			% ymax=10,
-			% xmin=-10,
-			% xmax=10
-			% domain=0:2*pi
-			]
-		% \addplot [violet, name path=a, domain = -1:1] gnuplot {0};
-		% \node [rotate=24] at (axis cs:  .1,  .40) {$y=\sqrt{x}$};
-
-    		\addplot [domain=0:2*pi, samples=100, name path=e2] ({exp(1)*cos(deg(x))}, {exp(1)*sin(deg(x))});
-    		\addplot [domain=0:2*pi, samples=100, name path=e4] ({exp(2)*cos(deg(x))}, {exp(2)*sin(deg(x))});
-		% \addplot [violet, name path=e4] gnuplot {sqrt(2.7**4-x**2)};
-		% \addplot [violet, name path=e4low] gnuplot {-sqrt(exp(4)-x**2)};
-		% \node [rotate=-24] at (axis cs:  .1,  1.70) {$y=x-2$};
-    		% \path[name path=axis] (axis cs:0,0) -- (axis cs:4,0);
-
+    		\addplot [domain=0:2*pi, samples=100, thick, name path=e2] ({exp(1)*cos(deg(x))}, {exp(1)*sin(deg(x))});
+    		\addplot [domain=0:2*pi, samples=100, thick, name path=e4] ({exp(2)*cos(deg(x))}, {exp(2)*sin(deg(x))});
 	\addplot [
 		thick,
 		pattern color=purple,
@@ -42,12 +29,10 @@
 	]
 	fill between[
 		of=e2 and e4,
-		% soft clip={domain=0:1},
     	];
 
 	\end{axis}
 	\end{tikzpicture}
-	%\subfile{plot.tex}
 	\caption{}
 \end{figure}
 
@@ -72,15 +57,18 @@
 
 \begin{dmath}
 	\iint_D \ln(x^2+y^2)\, dx\, dy
-	=
-	\iint_{G_{r\phi}} \ln(\overbrace{r^2\cos^2\phi+r^2\sin^2\phi}^{r^2})r\, dr\, d\phi
-	=
-	\iint_{G_{r\phi}} \ln r^3\, dr\, d\phi
-	=
-	\int_0^{2\pi}\,d\phi \int_e^{e^2} \ln r^3\, dr
+	= \iint_{G_{r\phi}} \ln(\overbrace{r^2\cos^2\phi+r^2\sin^2\phi}^{r^2})r\, dr\, d\phi
+	= \iint_{G_{r\phi}} \ln r^3\, dr\, d\phi
+	= \int_0^{2\pi}\,d\phi \int_e^{e^2} \ln r^3\, dr
+	= \int_0^{2\pi}\,d\phi\, 3\int_e^{e^2} \ln r\, dr
+	= \int_0^{2\pi}\,d\phi\, (3r\ln r-3r)\Bigg|_e^{e^2}
+	= \int_0^{2\pi}\,d\phi\, (3e^2\ln e^2-3e^2)-(3e\ln e-3e)
+	= \int_0^{2\pi}3e^2\,d\phi
+	= 3e^2\phi \Bigg|_0^{2\pi}
+	= 6\pi e^2
 \end{dmath}
 \Answer{
-	<++>
+	$6\pi e^2$
 }
 
 \end{document}
