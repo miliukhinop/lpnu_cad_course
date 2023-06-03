@@ -184,7 +184,7 @@ $$
 	-2Ce^{-2x}+2Ce^{-2x} = 0?
 $$
 
-тепер підстав ту фю в $y'+2y=x$
+тепер підстав ту фю в $y'+2y=x$ %, так само в ргр
 
 ## Рня Бернуллі
 
@@ -321,7 +321,7 @@ $$
 	= \frac{\ln|e^y|-\ln|e^y+C|}{C}
 $$
 
-# Лінійні дифрівняння зі сталими коефами
+# Лінійні дифрівняння зі сталими коефіцієнтами
 
 > Тихо! Мертві бджоли!
 
@@ -345,3 +345,339 @@ $$
 $$
 	y''+p_1(x)y'+p_2(x)y=Q(x)
 $$
+зі сталими коефами
+\begin{equation}
+	y^{(n)}
+	+a_1y^{(n-1)}
+	+a_2y^{(n-2)}
+	+\cdots
+	+a_ny
+	=0
+	\label{const}
+\end{equation}
+
+ейлер сказав так:
+$$
+y=e^{\lambda x},
+y'=\lambda e^{\lambda x},
+y''=\lambda^2 e^{\lambda x},
+y(n)=\lambda^n e^{\lambda x},
+$$
+$$
+\lambda^n e^{\lambda x}+
++\lambda^{n-1}a_1 e^{\lambda x},
++a_n e^{\lambda x},
+$$
+$$
+e^{\lambda x}(\lambda^n+a_1\lambda^{n-1}+\dots+a_n)=0
+$$
+$$
+\lambda^n+\lambda^{n-1}a_1+...+a_n=0
+$$
+
+### фундаментальна система розв'язків
+
+$$
+\phi_1(x)\dots \phi_n(x)
+$$
+
+якшо вони лінійно незалежні
+
+$$
+(C_1\phi_1(x)+\dots +C_n\phi_n(x)) = 0
+$$
+тільки як нулі
+
+напр sin x і 1
+або син і кос
+
+### так можна 2 порядку перевірити
+
+$$
+\phi_1(x)/\phi_2(x) \neq C
+$$
+
+але загалом --- **Визнàчник Вронського (Вронськіан)**
+
+![ватахел](De_template.svg.png){width=3cm}
+
+\begin{dmath}
+W[\phi_{1}(x),\phi_{2}(x),\dots,\phi_{n}(x)]={\begin{vmatrix}\phi_{1}(x)&\phi_{2}(x)&\cdots &\phi_{n}(x)\\\phi_{1}'(x)&\phi_{2}'(x)&\cdots &\phi_{n}'(x)\\\vdots &\vdots &\ddots &\vdots \\\phi_{1}^{(n-1)}(x)&\phi_{2}^{(n-1)}(x)&\cdots &\phi_{n}^{(n-1)}(x)\end{vmatrix}}
+\end{dmath}
+
+Якщо $W\neq0$, то вони лінійно незалежні.
+
+$$
+	y=
+	c_1\phi_1
+	+c_2\phi_2
+	+...
+	+c_n\phi_n
+$$
+
+$$
+	\lambda^2-1=0,
+	\lambda_1=1,
+	\lambda_2=-1,
+$$
+$$
+	\lambda^2=0,
+	\lambda_1=
+	\lambda_2=0,
+$$
+$$
+\lambda=0,
+2\lambda=0
+$$
+\begin{align}
+f(x)=0 \\
+f(x_0)=0 \\
+f'(x)=0
+\end{align}
+корінь кратності 2
+
+$z=a+ib$
+
+$$
+x^2+1=0 \\
+x=\pm\sqrt{-1}
+$$
+$$
+	(x-\sqrt{-1})
+	(x+\sqrt{-1})
+	=0
+$$
+$$
+	x^2-(\sqrt{-1})^2=0
+$$
+
+там шось про кількість коренів і кратність
+шо кратності додати ьо буде $n$
+
+## Переходимо до прощупування
+
+$$
+y'''-2y''-3y'=0
+$$
+дійсні різні корені
+
+1.
+\begin{align}
+	\lambda^3-2\lambda^2-3\lambda=0 \\
+	\lambda(\lambda^2-2\lambda^1-3)=0 \\
+	\lambda_1=0,
+	\lambda_2=-1,
+	\lambda_3=3,
+\end{align}
+2. фундаментальна система
+\begin{align}
+\phi_1(x)=e^{\lambda_1 x} = 1 \\
+\phi_2(x)=e^{\lambda_2 x} = e^{-x} \\
+\phi_3(x)=e^{\lambda_3 x} = e^{3x}
+\end{align}
+
+3. Вронського будуємо
+$$
+\begin{vmatrix}
+	1 & e^{-x} & e^{3x} \\
+	0 & -e^{-x} & 3e^{3x} \\
+	0 & e^{-x} & 9e^{3x} \\
+\end{vmatrix}
+=
+\begin{vmatrix}
+	1 & 1 & 1 \\
+	0 & 1 & 3 \\
+	0 & 1 & 9 \\
+\end{vmatrix} \neq 0
+$$
+$$
+	y(x)=c_1*1+c_2*e^{-x}+c_3 e^{3x}
+$$
+
+Це був найпростіший випадок
+
+## наступний приклад
+
+$$
+	y'''+2y''+y'=0
+$$
+дифрня 3 порядку зі сталими коефами
+
+\begin{align}
+	\lambda^3+2\lambda^2+\lambda=0 \\
+	\lambda(\lambda+1)^2=0\\
+	\lambda_1=0,
+	\lambda_2=
+	\lambda_3=-1,
+\end{align}
+$$
+	(\lambda-1)^2=0
+	2(\lambda-1)=0
+$$
+\begin{align}
+	\phi_1(x)=e^{\lambda_1x}=e^0=1 \\
+	\phi_2(x)=e^{\lambda_2x}=e^0=e^{-x} \\
+	\phi_3(x)=xe^{-x} \\
+	y(x)=c_1*1+c_2*e^{-x}+c_3xe^{-x}
+\end{align}
+
+## таке
+
+\begin{align}
+	y'''+4y''+13y'=0 \\
+	\lambda^3+4\lambda^2+13\lambda=0 \\
+	\lambda(\lambda^2+4\lambda+13)=0\\
+	\lambda_1=0 \\
+	\lambda_{1,2}=-2\pm\sqrt{4-13}=-2\pm3i \\
+	\lambda_2=-2+3i \\
+	\lambda_3=-2-3i
+\end{align}
+
+$\bar z=a-ib$ комплексно спряжене
+
+\begin{align}
+\phi_1(x)=e^l1x=1 \\
+\phi_2(x)=e^l2x=e^{-2x+3ix} \\
+\phi_3(x)=e^l3x=e^{-2x-3ix}
+\end{align}
+$$
+	\phi_2(x)=e^{-2x}*\cos 3x
+	\phi_3(x)=e^{-2x}*\sin 3x
+$$
+
+там почиитаєте
+
+відома формула ейлера:
+
+\fbox{
+	$e^{i\phi}=\cos\phi+i\sin\phi$
+}
+
+$$
+y(x)=c_1*1+c_2e^{-2x}\cos3x+c_3e^{-2x}\sin3x
+$$
+
+## зара вас шарахну
+
+$$
+	y^V-2y^{IV}+2y'''-4y''+y'-2y=0
+$$
+
+$$
+	\lambda^5-2\lambda^4+2... \\
+	(\lambda-2)(\lambda^2+1)^2=0 \\
+	\lambda_1=2,
+	\lambda_2=i,
+	\lambda_3=-i,
+$$
+2,3 --- корені кратності 2, а загалом їх 5
+
+\begin{align}
+\phi_1(x)=e^l1x=e^{2x} \\
+\phi_2(x)=e^l2x=\cos x \\
+\phi_3(x)=e^l3x=x\cos x \\
+\phi_4(x)=\sin(x) \\
+\phi_5(x)=x\sin(x)
+\end{align}
+$$
+	y=c_1 e^{2x}
+	+c_2\cos x
+	+c_3x\cos x
+	+c_4\sin x
+	+c_5x\sin x
+$$
+
+# Лінійні неоднорідні дифрівняння
+
+> На екзамені не буде, справа буде 0
+
+$$
+	y''-2y'-3y=e^{4x}
+$$
+
+1. Метод варіації сталих (лагранжа) **універсальний**
+2. є ше метод підбору розв'язку для спеціальної правої частини
+3. Розв'язуємо однорідне
+
+\begin{align}
+y''-2y'-3y=0 \\
+\lambda^2-2\lambda-3=0 \\
+\lambda_1=-1,\lambda_2=3 \\
+\phi_1(x)=e^{-x} \\
+\phi_2(x)=e^{3x} \\
+y_0(x)=c_1e^{-x}+c_2e^{3x}
+\end{align}
+
+$$
+y_0(x)+y_c(x)
+$$
+$$
+y_2(x)=
+c_1(x)e^{-x}
+c_2(x)e^{3x}
+$$
+$$
+\begin{cases}
+	c_1'(x)e^{-x} + c_2'(x)e^{3x}=0 \\
+	c_1'(x)(-e^{-x}) + c_2'(x)3e^{3x}=0 \\
+\end{cases}
+$$
+3 порядку система 3 на 3
+$$
+\Delta=
+\begin{vmatrix}
+	e^{-x} & e^{3x} \\
+	-e^{-x} & 3e^{3x} \\
+\end{vmatrix}
+= 3e^{2x}+e^{2x}=4e^{2x}
+$$
+$$
+\Delta_{c_1}=
+\begin{vmatrix}
+	0 & e^{3x} \\
+	e^{4x} & 3e^{3x} \\
+\end{vmatrix}
+= -e^{7x},~
+\Delta_{c_2}=e^{3x}
+$$
+\begin{align}
+c_1'=\frac{-e^{7x}}{4e^{2x}}=-\frac{1}{4}e^{5x} &\implies
+c_1(x)=-\frac{1}{20}e^{5x} \\
+c_2'=\frac{e^{3x}}{4e^{2x}}=\frac{1}{4}e^{x} &\implies
+c_2(x)=\frac{1}{4}e^{x}
+\end{align}
+$$
+y_2(x)=-\frac{1}{20}e^{5x}*e^{-x}+\frac{1}{4}e^{x}*e^{3x}
+=\frac{1}{5}e^{4x}
+$$
+$$
+y(x)=c_1e^{-x}+c_2e^{3x}+\frac{1}{5}e^{4x}
+$$
+\begin{align}
+	\frac{16}{5}e^4x-\frac{4}{5}e^4x-\frac{3}{5}e^4x\overset{?}{=}e^4x \\
+	\frac{16}{5}-\frac{8}{5}-\frac{3}{5}=\frac{5}{5}
+\end{align}
+
+## 21 (1)
+
+$$
+y'''-3y''+3y'-y=0
+$$
+\begin{align}
+	\lambda^3-3\lambda^2+3\lambda-1=0 \\
+	(\lambda-1)^3=0 \\
+	\lambda_1
+	=\lambda_2
+	=\lambda_3
+	=1 \text{~кратності 3} \\
+	\phi_1(x)=e^x,
+	\phi_2(x)=xe^x,
+	\phi_3(x)=x^2e^x \\
+	y(x)=c_1e^x+c_2xe^x+c_3 x^2e^x \\
+	y(x)=(c_1+c_2x+c_3x^2)e^x
+\end{align}
+
+> Як стрільба з лука, Тіньк!
+
+> Життя спортсмена коротке! Я сказав спортсмена, блін.
+Спортивне життя коротке!

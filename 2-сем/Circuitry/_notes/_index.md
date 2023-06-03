@@ -8,8 +8,10 @@ SPDT 2 перемикач
 [notes](notes.md)
 [shortcuts](shortcuts.md)
 [дешифратори](дешифратори.md)
+[sum](sum)
 [chipset](chipset)
 [memory](memory)
+[prospects](prospects)
 
 https://www.youtube.com/watch?v=PHG-PWPzizo change workspace size
 https://www.youtube.com/watch?v=G0Yjl-KSHcQ logic expression
@@ -25,3 +27,10 @@ https://www.youtube.com/watch?v=mUyMjX4V7wc multiplexer simulation
 
 - для буферизації шини адрес (2)
 - n
+
+## В основу побудови сучасних засобів обчислювальної техніки IV покоління покладені наступні принципи:
+
+1) мікропрограмна організація керування;
+2) модульний принцип побудови;
+3) магістральний обмін інформацією;
+4) регулярність структури.
