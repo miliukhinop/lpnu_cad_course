@@ -5,6 +5,7 @@
 **/*.epub
 **/*.djvu
 **/*.aux
+**/*.bcf
 **/*.log
 **/*.ilg
 **/*.ind

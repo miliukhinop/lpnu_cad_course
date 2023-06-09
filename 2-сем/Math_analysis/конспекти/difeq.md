@@ -99,7 +99,7 @@ $$
 	u'x+u = \frac{3ux-2x}{x} \\
 	u'x+u = 3u-2 \implies
 	u'x=2u-2 \\
-	\frac{du}{dx}-x=2u-2 \implies
+	\frac{du}{dx}\cdot x=2u-2 \implies
 	\frac{du}{2u-2}=\frac{dx}{x}
 \end{align}
 
@@ -381,15 +381,13 @@ $$
 \phi_1(x)\dots \phi_n(x)
 $$
 
-якшо вони лінійно незалежні
-
+якшо вони лінійно незалежні, то:
 $$
 (C_1\phi_1(x)+\dots +C_n\phi_n(x)) = 0
 $$
-тільки як нулі
-
-напр sin x і 1
-або син і кос
+тільки як $C_1=C_2=\cdots=C_n=0$.
+Наприклад, $\sin x$ і 1,
+або $\sin x$ і $\cos x$
 
 ### так можна 2 порядку перевірити
 
