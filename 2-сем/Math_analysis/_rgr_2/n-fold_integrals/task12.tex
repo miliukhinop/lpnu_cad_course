@@ -7,7 +7,7 @@
 \begin{document}
 
 \Problem{
-	% Обчислити подвійний інтеграл, переходячи до полярної системи координат
+	Обчислити подвійний інтеграл, переходячи до полярної системи координат
 	$
 		\iint_D \ln(x^2+y^2)\, dx\, dy,
 		D: x^2+y^2\geq e^2,
@@ -20,8 +20,8 @@
 	\centering
 	\begin{tikzpicture}
 	\begin{axis}
-    		\addplot [domain=0:2*pi, samples=100, thick, name path=e2] ({exp(1)*cos(deg(x))}, {exp(1)*sin(deg(x))});
-    		\addplot [domain=0:2*pi, samples=100, thick, name path=e4] ({exp(2)*cos(deg(x))}, {exp(2)*sin(deg(x))});
+    		\addplot [domain=0:2*pi, samples=100, name path=e2] ({exp(1)*cos(deg(x))}, {exp(1)*sin(deg(x))});
+    		\addplot [domain=0:2*pi, samples=100, name path=e4] ({exp(2)*cos(deg(x))}, {exp(2)*sin(deg(x))});
 	\addplot [
 		thick,
 		pattern color=purple,

@@ -27,11 +27,38 @@ $
 \end{equation}
 
 \begin{equation}
-	y=C\,{e}^{2\,x}+\dfrac{C_{1}}{{e}^{3\,x}}
+	y=C\,{e}^{2\,x}+\frac{C_{1}}{{e}^{3\,x}}
 \end{equation}
 
+Час знайти розв'язок задачі Коші
+
+\begin{dmath}
+	\begin{cases}
+		y=C\,{e}^{2\,x}+\frac{C_{1}}{{e}^{3\,x}} \\
+		y'=2\,C\,{e}^{2\,x}-\frac{3\,C_{1}}{{e}^{3\,x}}
+	\end{cases}
+\implies
+	\begin{cases}
+		1=C\,{e}^0+\frac{C_{1}}{{e}^0} \\
+		2=2C-3C_1
+	\end{cases}
+\implies
+	\begin{cases}
+		1=C+C_1 \\
+		2=2(1-C_1)-3C_1
+	\end{cases}
+\\
+	\begin{cases}
+		1=C+C_1 \implies C=1 \\
+		0=-5C_1 \implies C_1=0
+	\end{cases}
+\implies y={e}^{2\,x}
+\end{dmath}
+
 \Answer{
-	<++>
+	$
+	y={e}^{2\,x}
+	$
 }
 
 \end{document}

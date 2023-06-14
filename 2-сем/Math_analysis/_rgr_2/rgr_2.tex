@@ -1,4 +1,4 @@
-\documentclass[a4paper, 12pt, oneside]{extreport}
+\documentclass[a4paper, 12pt]{extreport}
 
 \input{$HOME/Templates/lpnu_doc_templates/settings/preamble}
 %shell-escape
@@ -24,6 +24,15 @@
 \usepackage{boxedminipage}
 \usepackage{varwidth}
 \fboxrule=1pt
+
+\usepackage{titlesec, blindtext, color}
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{10pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
 
 %	TODO:	REFACTORING	%
 \newtoggle{Report}
@@ -76,17 +85,8 @@
 }{
 \end{list}
 }
-\newenvironment{cenum}{
-\begin{enumerate}{
-\setlength\partopsep{0pt}
-\setlength\parskip{0pt}
-\setlength\parsep{0pt}
-\setlength\topsep{0pt}
-\setlength\itemsep{0pt}
-}
-}{
-\end{enumerate}
-}
+
+\usepackage{paralist}
 
 \begin{document}
 
