@@ -2,11 +2,32 @@
 
 \begin{document}
 
-\Problem{<++>}
+\Problem{Знайти розв'язок задачі Коші
+$
+	y''+y'-6y=0,~y(0)=1,~y'(0)=2
+$
+}
 \Solution
 
+\begin{align}
+	\lambda^2+\lambda-6=0 \\
+	\left(\lambda-2\right)\,\left(\lambda+3\right)=0 \\
+	\lambda_1 = 2,
+	\lambda_2 = -3 \\
+	\varphi_1(x)=e^{\lambda_1 x}=e^{2x} \\
+	\varphi_2(x)=e^{\lambda_2 x}=e^{-3x}
+\end{align}
 \begin{equation}
-	<++>
+	W=
+	\begin{vmatrix}
+		e^{2x}	&e^{-3x}	\\
+		2e^{2x}	&-3e^{-3x}
+	\end{vmatrix}
+	=-5e^{-x} \neq 0 \text{,~отже розв'язки лінійно незалежні}
+\end{equation}
+
+\begin{equation}
+	y=C\,{e}^{2\,x}+\dfrac{C_{1}}{{e}^{3\,x}}
 \end{equation}
 
 \Answer{

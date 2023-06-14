@@ -17,11 +17,14 @@ $
 	\end{aligned}
 \end{equation}
 \begin{equation}
-	\lim_{n\to\infty}\left|\frac{\sin(3n)}{3^n}\right| = 0
+	% \lim_{n\to\infty}\left|\frac{\sin(3n)}{3^n}\right| = 0
+	\lim_{n\to\infty}\left|\frac{\sin(3(n+1))3^n}{3^{n+1}\sin(3n)}\right|
+	= \lim_{n\to\infty}\left|\frac{\sin3(n+1)}{3\sin(3n)}\right|
+	= ???
 \end{equation}
 
 \Answer{
-	Ряд абсолютно збіжний
+	Ряд умовно збіжний
 }
 
 \end{document}
