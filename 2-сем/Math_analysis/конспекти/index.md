@@ -9,7 +9,6 @@ $\int \frac{1}{a^2+x^2}dx = \frac{1}{a}\tan^{-1}\frac{x}{a}$
 * [Первісна й Інтеграл](Primitive_Integral)
 * [Таблиця хробаків](common-integrals)
 * [Багато Інтегралів](qirw)
-* bruh
 * $\int\frac{x-1}{5-x^2}\,dx$
 * [ряди](series)
 * [дифрня](difeq)
