@@ -1,10 +1,13 @@
 ---
 pdfengine: pdflatex
+documentclass: amsart
 header-includes:
 - \usepackage{amsmath}
 - \usepackage{mathtools}
 - \sloppy
 ---
+
+\newtheorem{ther}{Теорема}
 
 \twocolumn
 

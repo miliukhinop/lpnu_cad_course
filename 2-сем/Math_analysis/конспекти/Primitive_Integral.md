@@ -1,11 +1,14 @@
 ---
 title: Первісна й інтеграл
 author: книжка "Інтеграл"
+pdf-engine: pdflatex
 header-includes:
 - \usepackage{amssymb}
 - \usepackage{mathtools}
 - \usepackage{polynom}
 ---
+
+\twocolumn
 
 > Читається цілий семестр на мехматі, я вам розкажу за три пари. --- **Пахолок Б. Б.**
 
@@ -46,7 +49,7 @@ $$
 \int f(x)\, dx = F(x) + c
 $$
 
-підінтегральний вираз:
+підінт. вираз:
 $\begin{cases}
 f(x) & \text{підінтегральна функція} \\
 dx & \text{знак диференціяла}
@@ -95,12 +98,11 @@ $$
 
 $df(x) = f'(x)\, dx$
 
----
-$$
+\fbox{
+$
 d(\alpha x + b) = \alpha \, dx
-$$
-
----
+$
+}
 
 $f(x) = g(x) \to f'(x) = g'(x)$
 
@@ -113,32 +115,36 @@ $$
 > Якомога більше задач розв'язати, бо тут не все так просто
 
 $$
-\int(\alpha x + 1)^{10}\, dx =
-\left] \begin{aligned}
-^{2x+1 = t}\\
-d(2x+1) = dt\\
-2\, dx = dt
-\end{aligned} \right[
-= \int t^{10} =
+\int(\alpha x + 1)^{10}\, dx
+$$
+Підстановка: \fbox{
+$\begin{aligned}
+	^{2x+1 = t}\\
+	d(2x+1) = dt\\
+	2\, dx = dt
+\end{aligned}$
+}
+\begin{dmath}
+\int t^{10} =
 \frac{1}{2} \int t^{10}dt = \frac{1}{2} * \frac{t^{11}}{11} + c =
 \frac{1}{22} (2x+1)^{11} +c
-$$
-] --- заміна
+\end{dmath}
 
 $$
 \int \sin x \cos x \, dx = \int \underbrace{\sin x}_t  d\underbrace{\sin x}_t
+$$
+$$
 = \int t dt = \frac{t^2}{2} + c =
 \frac{1}{2} \sin^2 x + c
 $$
-
 \begin{multline}
 \int \frac{2^x + 5^x}{10^x} =
 \int (\frac{2^x}{10^x} + \frac{5^x}{10^x})\, dx =
-\int (5^{\underbrace{-x}_{\displaystyle t}} + 2^{-x}\, \underbrace{dx}_{-dt} =
+\int (5^{\underbrace{-x}_{\displaystyle t}} + 2^{-x}\, \underbrace{dx}_{-dt} \\ =
 % ] -x = t; \, dx = -dt [ =
--\int (5^t + 2^t)dt =\\
+-\int (5^t + 2^t)dt =
 - \left( \int 5^tdt +\int 2^t dt \right)
-= \left( \frac{5^t}{ln 5} + \frac{2^t}{ln 2} \right) + c =
+\\ = \left( \frac{5^t}{ln 5} + \frac{2^t}{ln 2} \right) + c =
 - \left(\frac{5^{-x}}{\ln 5} + \frac{2^{-x}}{\ln 2} \right) + c
 \end{multline}
 
@@ -148,15 +154,14 @@ $$
 \int \frac{\, dx}{ax^2+bx+c}, \int\sqrt{ax^2+bx+c}\, dx, \int \frac{Ax +B}{ax^2+bx+c}
 $$
 
-тільки ***виділення повного квадрату***
-
-$$
+тільки ***виділення повного квадрату:***
+\begin{align}
 \int \frac{\, dx}{x^2-4x+10} = \int \frac{d(x-2)}{(\underbrace{x-2}_{t})^2 +6}
 % ] x-2 = t [
-= \int \frac{dt}{t^2 +6}
+= \int \frac{dt}{t^2 +6} \\
 = \int \frac{dt}{t^2 + (\sqrt{6})^2} =
 \frac{1}{\sqrt{6}} \arctg \frac{1}{\sqrt{6}} + c
-$$
+\end{align}
 
 $$
 	x^2 -4x + 10 = x^2 - 2*2x +4 + 6 = (x-2)^2 + 6
@@ -176,7 +181,6 @@ $$
 $$
 	\int udv = uv - \int vdu
 $$
-
 \begin{gather*}
  	\int d (u \cdot v) = \int du \cdot v + \int u dv \\
  	u \cdot v = \int vdu + \int udv \\
@@ -191,7 +195,7 @@ $$
  2. $e^x * x = u, \, dx = dv$
  3. $e^x\, dx = dv, x = u$ --- о!
 
-Який простіший?
+**Який простіший?**
 
 1. $\int \frac{x^2}{2} e^x \, dx$
 2. ...
